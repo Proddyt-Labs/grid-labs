@@ -20,6 +20,8 @@ struct App(SheetApp, #[cfg(target_os = "macos")] Option<native_menu::NativeMenu>
 
 impl eframe::App for App {
     fn logic(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+        // Proddyt Switch: asks to update from the fork's releases (LABS-156).
+        labs_updater::frame(ctx, "grid-labs", "Grid Labs");
         #[cfg(target_os = "macos")]
         {
             if self.1.is_none() && std::env::var_os("GRIDCRAFT_NO_NATIVE_MENU").is_none() {

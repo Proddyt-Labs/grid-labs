@@ -1399,6 +1399,7 @@ dependencies = [
  "gridcraft-engine",
  "gridcraft-ui-egui",
  "image",
+ "labs-updater",
  "log",
  "muda",
  "rfd",
@@ -1810,6 +1811,14 @@ dependencies = [
  "euclid",
  "polycool",
  "smallvec",
+]
+
+[[package]]
+name = "labs-updater"
+version = "0.1.0"
+dependencies = [
+ "egui",
+ "serde_json",
 ]
 
 [[package]]
